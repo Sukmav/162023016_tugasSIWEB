@@ -1,0 +1,339 @@
+/* saya mengerjakan tugas ini sendiri tanpa melakukan kecurangan seperti menggunakan, 
+mendupliaksi kode perogram kode program yang ada. jia saya melakukan kecurangan dalam perngerjaan tugas ini maka saya siap menerima sanksi 
+atau hukuman dari dari dosen mata kuliah dan tuhan / allah  swt */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #4D83AA;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto 50px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    background-color: #E2D800;
+    padding: 20px 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+header h1 {
+    font-size: 32px;
+    color: #032152;
+    font-weight: normal;
+}
+
+/* halaman 1 */
+.page1 {
+    min-height: auto;
+    background-color: transparent;
+}
+
+.content-wrapper {
+    display: flex;
+    min-height: 500px;
+    position: relative;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 300px;
+    background-color: white;
+    padding: 20px;
+    border-right: 3px dotted #333;
+    position: relative;
+    align-self: flex-start;
+}
+
+.sidebar::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 300px;
+    background-color: #4D83AA;
+}
+
+.menu-section h2, .search-section h2 {
+    font-size: 24px;
+    color: #032152;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px dotted #333;
+}
+
+.menu-section ul {
+    list-style: none;
+    margin-bottom: 40px;
+}
+
+.menu-section ul li {
+    margin: 8px 0;
+}
+
+.menu-section ul li a {
+    color: #4D83AA;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.menu-section, .search-section {
+    position: relative;
+    z-index: 1;
+}
+
+.search-section {
+    margin-top: 30px;
+}
+
+.search-box {
+    display: flex;
+    gap: 5px;
+    margin-top: 15px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #999;
+    border-radius: 3px;
+}
+
+.search-box button {
+    padding: 8px 20px;
+    background-color: #ddd;
+    border: 1px solid #999;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 20px 40px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-content h2 {
+    font-size: 28px;
+    color: #032152;
+    margin-bottom: 20px;
+    align-self: flex-start;
+}
+
+/* Table */
+.outer-table {
+    width: 100%;
+    max-width: 500px;
+    border-collapse: collapse;
+    border: 3px solid #032152;
+    margin: 0 auto;
+}
+
+.outer-table thead {
+    background-color: #9CBCD0;
+}
+
+.outer-table th {
+    padding: 12px;
+    color: white;
+    font-weight: bold;
+    border: 2px solid #032152;
+}
+
+.outer-table tbody tr {
+    background-color: #9CBCD0;
+}
+
+.outer-table td {
+    padding: 12px;
+    text-align: center;
+    color: white;
+    border: 2px solid #9CBCD0;
+}
+
+.footer-cell {
+    padding: 0 !important;
+    background-color: white;
+    border: none !important;
+}
+
+.table-footer {
+    background-color: white;
+    padding: 15px;
+    text-align: center;
+    color: #333;
+    margin: 0;
+}
+
+/* Page 2 - Form */
+.page2 {
+    min-height: 800px;
+}
+
+.form-wrapper {
+    background-color: white;
+    padding: 40px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-wrapper h2 {
+    font-size: 28px;
+    color: #21678A;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+form {
+    width: 100%;
+    max-width: 900px;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    align-items: stretch;
+    gap: 15px;
+}
+
+.label-wrapper {
+    flex: 0 0 380px;
+    background-color: #C0E8FB;
+    border-radius: 8px;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.form-group label {
+    color: #21678A;
+    font-size: 16px;
+    text-align: right;
+}
+
+.input-wrapper {
+    flex: 1;
+    background-color: #C0E8FB;
+    border-radius: 8px;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.form-group input[type="text"], .form-group input[type="password"] {
+    width: 100%;
+    padding: 15px 20px;
+    border: 2px dotted #21678A;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.form-group input::placeholder {
+    color: #aaa;
+}
+
+.checkbox-group {
+    justify-content: flex-end;
+    background-color: #C0E8FB;
+    padding: 15px 20px;
+    border-radius: 8px;
+}
+
+.checkbox-group label {
+    width: auto;
+    text-align: right;
+    padding: 0;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.checkbox-group .label-wrapper {
+    background-color: transparent;
+    padding: 0;
+}
+
+.form-group.submit-group {
+    background-color: #C0E8FB;
+    padding: 15px 20px;
+    border-radius: 8px;
+    justify-content: flex-end;
+}
+
+.submit-btn {
+    padding: 12px 35px;
+    background-color: #4D83AA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-btn:hover {
+    background-color: #3a6a8a;
+}
+    .header {
+    width: 800px;
+    margin: auto;
+    border-collapse: collapse;
+    background-color: #E2D800;
+
+    /* scallop (setengah lingkaran) */
+    background-image: radial-gradient(circle, #5f88a7 6px, transparent 7px);
+    background-size: 20px 12px;
+    background-repeat: repeat-x;
+    background-position: top;
+}
+
+/* Pembungkus untuk efek scallop */
+.header-wrapper {
+    width: 800px;
+    margin: auto;
+    position: relative;
+}
+
+/* Efek setengah lingkaran */
+.header-wrapper::before {
+    content: "";
+    display: block;
+    height: 12px;
+    background: radial-gradient(circle at 12px -2px, #5f88a7 12px, transparent 13px) repeat-x;
+    background-size: 24px 12px;
+}
+
+.header-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #032152;
+    padding: 15px;
+}
