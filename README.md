@@ -1,2 +1,5 @@
-# tugas2_162023016
-# quizkelas
+# TUGAS ISB-310 SISTEM INFORMASI BERBASIS WEB
+
+# Nama : Sukma Oktavia
+# NRP  : 162023016
+
