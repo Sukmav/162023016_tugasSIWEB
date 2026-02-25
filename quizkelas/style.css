@@ -1,0 +1,24 @@
+/* saya mengerjakan tugas ini sendiri tanpa melakukan kecurangan seperti menggunakan, mendupliaksi kode perogram kode program yang ada. 
+jika saya melakukan kecurangan dalam perngerjaan tugas ini maka saya siap menerima sanksi atau hukuman dari dari dosen mata kuliah dan tuhan / allah  swt */
+body {
+            font-family:'Times New Roman', Times, serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        
+        button {
+            padding: 5px 15px;
+            font-size: 14px;
+            cursor: pointer;
+            background-color: #ccc9c9;
+            border: 1px solid #999;
+            border-radius: 3px;
+        }
+        
+        button:hover {
+            background-color: #ffffff;
+        }
+        
+        #counter-display {
+            margin-top: 20px;
+        }
