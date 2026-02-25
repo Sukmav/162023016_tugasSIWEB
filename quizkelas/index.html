@@ -8,18 +8,19 @@ jika saya melakukan kecurangan dalam perngerjaan tugas ini maka saya siap meneri
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <button onclick="oneClick()">Click me!</button>
+    <button onclick="countClick()">Click me!</button>
     <div id="counter-display"></div>
 
     <p>Click the button to see the counter increase.</p>
     <p>Close the browser tab (or window), and try again, and the counter is reset.</p>
 
     <script>
-        let clickCount = 0;
-        function oneClick() {
+        let clickCount = parseInt(localStorage.getItem('clickCount')) || 0;
+        function countClick() {
             clickCount++;
+            localStorage.setItem('clickCount', clickCount);
             displayCounter();
-        } 
+        }
         function displayCounter() {
             const displayDiv = document.getElementById('counter-display');
             displayDiv.innerHTML = `<p>You have clicked the button ${clickCount} time(s) in this session.</p>`;

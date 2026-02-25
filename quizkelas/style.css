@@ -1,7 +1,7 @@
 /* saya mengerjakan tugas ini sendiri tanpa melakukan kecurangan seperti menggunakan, mendupliaksi kode perogram kode program yang ada. 
 jika saya melakukan kecurangan dalam perngerjaan tugas ini maka saya siap menerima sanksi atau hukuman dari dari dosen mata kuliah dan tuhan / allah  swt */
 body {
-            font-family:'Times New Roman', Times, serif;
+            font-family: Arial, sans-serif;
             margin: 20px;
             line-height: 1.6;
         }
@@ -10,15 +10,26 @@ body {
             padding: 5px 15px;
             font-size: 14px;
             cursor: pointer;
-            background-color: #ccc9c9;
+            background-color: #f0f0f0;
             border: 1px solid #999;
             border-radius: 3px;
         }
         
         button:hover {
-            background-color: #ffffff;
+            background-color: #e0e0e0;
         }
         
         #counter-display {
             margin-top: 20px;
+        }
+        
+        #reset-btn {
+            margin-left: 10px;
+            background-color: #ff6b6b;
+            color: white;
+            border: 1px solid #cc5555;
+        }
+        
+        #reset-btn:hover {
+            background-color: #ff5252;
         }
