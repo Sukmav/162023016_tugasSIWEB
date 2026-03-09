@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>tugas4</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="main-content">
+
+    <div class="header-image">
+        <div class="image-grid">
+            <div class="image-placeholder"></div>
+            <div class="image-placeholder"></div>
+            <div class="image-placeholder"></div>
+            <div class="image-placeholder"></div>
+            <div class="image-placeholder"></div>
+            <div class="image-placeholder"></div>
+        </div>
+    </div>
+
+    <div class="layout-row">
+
+        <div class="sidebar">
+            <div class="menu-item active">Home</div>
+            <div class="menu-item">Menu</div>
+            <div class="menu-item">Calculator</div>
+            <div class="menu-item highlight">Garis Hidup</div>
+        </div>
+
+        <div class="content-box">
+
+            <h1>Program Garis Hidup Tanggal Lahir</h1>
+
+            <div class="description">
+                <p>
+                Program ini merupakan program untuk mendeskripsikan karakter anda
+                berdasarkan tanggal lahir yang kemudian hasilnya akan dikategorikan
+                sebagai Garis Lahir 1 sampai 9.
+                </p>
+
+                <p>
+                Angka-angka dalam tanggal lahir Anda menyimpan banyak makna.
+                Jumlahkan sampai menjadi satu angka, lalu lihat artinya!
+                (misalnya Anda lahir tanggal 25 desember 1998,
+                25 + 12 + 1998 = 2 + 5 + 1 + 2 + 1 + 9 + 9 + 8 = 36
+                → 3 + 6 = 9)
+                </p>
+            </div>
+
+            <h2>Ayo Cari Tahu Kepribadian Kamu !</h2>
+
+            <div class="form-group">
+                <label>Masukkan Tanggal Lahir Anda</label>
+                <select id="tanggal">
+                    <option value="">-</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Masukkan Bulan Lahir Anda</label>
+                <select id="bulan">
+                    <option value="">-</option>
+                    <option value="1">Januari</option>
+                    <option value="2">Februari</option>
+                    <option value="3">Maret</option>
+                    <option value="4">April</option>
+                    <option value="5">Mei</option>
+                    <option value="6">Juni</option>
+                    <option value="7">Juli</option>
+                    <option value="8">Agustus</option>
+                    <option value="9">September</option>
+                    <option value="10">Oktober</option>
+                    <option value="11">November</option>
+                    <option value="12">Desember</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Masukkan Tahun Lahir Anda</label>
+                <select id="tahun">
+                    <option value="">-</option>
+                </select>
+            </div>
+
+            <div class="button-group">
+                <button id="kirim" class="btn-submit">kirim</button>
+                <button id="reset" class="btn-reset">reset</button>
+            </div>
+
+            <div class="output-section">
+
+                <h3>Output</h3>
+
+                <div class="output-grid">
+
+                    <div class="output-row">
+                        <span class="output-label">Tanggal</span>
+                        <input type="text" id="output-tanggal" readonly>
+                    </div>
+
+                    <div class="output-row">
+                        <span class="output-label">Bulan</span>
+                        <input type="text" id="output-bulan" readonly>
+                    </div>
+
+                    <div class="output-row">
+                        <span class="output-label">Tahun</span>
+                        <input type="text" id="output-tahun" readonly>
+                    </div>
+
+                    <div class="output-row">
+                        <span class="output-label">Hasil 1</span>
+                        <input type="text" id="output-hasil1" readonly>
+                    </div>
+
+                    <div class="output-row">
+                        <span class="output-label">Hasil 2</span>
+                        <input type="text" id="output-hasil2" readonly>
+                    </div>
+
+                    <div class="output-row">
+                        <span class="output-label">Hasil Akhir</span>
+                        <input type="text" id="output-hasil-akhir" readonly>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="result-message" class="result-message"></div>
+
+            <div class="footer">
+                280224 <br>
+                Sistem Informasi || ITENAS 2024
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
