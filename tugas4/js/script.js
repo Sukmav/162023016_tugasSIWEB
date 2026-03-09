@@ -1,15 +1,15 @@
 $(document).ready(function() {
-    // Populate tanggal (1-31)
+
     for (let i = 1; i <= 31; i++) {
         $('#tanggal').append(`<option value="${i}">${i}</option>`);
     }
     
-    // Populate tahun (1900-2026)
+
     for (let i = 2026; i >= 1900; i--) {
         $('#tahun').append(`<option value="${i}">${i}</option>`);
     }
     
-    // Fungsi untuk menjumlahkan digit sampai menjadi angka 1-9
+
     function sumDigits(num) {
         let sum = 0;
         let numStr = num.toString();
@@ -21,13 +21,13 @@ $(document).ready(function() {
         return sum;
     }
     
-    // Fungsi untuk menghitung life path number
+
     function calculateLifePath(day, month, year) {
-        // Jumlahkan semua angka
+
         let total = day + month + year;
         let hasil1 = total;
         
-        // Reduce sampai menjadi 1-9
+
         while (total > 9) {
             total = sumDigits(total);
         }
@@ -39,7 +39,7 @@ $(document).ready(function() {
         };
     }
     
-    // Pesan berdasarkan angka garis hidup
+
     function getLifePathMessage(number) {
         const messages = {
             1: {
@@ -119,22 +119,22 @@ Namun, mereka perlu belajar untuk membiarkan hal-hal pergi dan tidak terlalu ter
         return messages[number] || { title: "Tidak diketahui", content: "" };
     }
     
-    // Event handler untuk tombol kirim
+
     $('#kirim').on('click', function() {
         const tanggal = parseInt($('#tanggal').val());
         const bulan = parseInt($('#bulan').val());
         const tahun = parseInt($('#tahun').val());
         
-        // Validasi input
+
         if (!tanggal || !bulan || !tahun) {
             alert('Mohon lengkapi semua data tanggal lahir!');
             return;
         }
         
-        // Hitung life path number
+
         const result = calculateLifePath(tanggal, bulan, tahun);
         
-        // Tampilkan output
+
         $('#output-tanggal').val(tanggal);
         $('#output-bulan').val(bulan);
         $('#output-tahun').val(tahun);
@@ -142,20 +142,19 @@ Namun, mereka perlu belajar untuk membiarkan hal-hal pergi dan tidak terlalu ter
         $('#output-hasil2').val(result.hasil2);
         $('#output-hasil-akhir').val(result.hasilAkhir);
         
-        // Tampilkan pesan berdasarkan hasil
+
         const message = getLifePathMessage(result.hasilAkhir);
         $('#result-message').html(`
             <h2>${message.title}</h2>
             ${message.content.split('\n\n').map(p => `<p>${p}</p>`).join('')}
         `).fadeIn();
         
-        // Scroll ke hasil
+
         $('html, body').animate({
             scrollTop: $('#result-message').offset().top - 100
         }, 500);
     });
-    
-    // Event handler untuk tombol reset
+
     $('#reset').on('click', function() {
         $('#tanggal').val('');
         $('#bulan').val('');
