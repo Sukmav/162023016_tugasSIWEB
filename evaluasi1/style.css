@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: url("assets/logo.jpg");
+}
+
+.container {
+    width: 70%;
+    margin: 30px auto;
+    border: 10px solid #7b4a4a;
+    background-color: #d6a354;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 120px);  
+    gap: 0; 
+}
+
+.header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.header img {
+    border: none;
+    display: block;
+}
+
+.content {
+    display: flex;
+}
+
+.sidebar {
+    width: 25%;
+    padding: 20px;
+}
+
+.sidebar p {
+    border-bottom: 2px solid #5c4a2c;
+    padding: 10px;
+    cursor: pointer;
+    color: purple;
+}
+
+.sidebar p:hover {
+    background-color: #c28b3c;
+}
+
+.main {
+    width: 75%;
+    padding: 20px;
+}
+
+.main button {
+    background-color: black;
+    color: yellow;
+    padding: 5px 15px;
+    border: none;
+}
+
+.footer {
+    background-color: orange;
+    text-align: center;
+    padding: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.menu-table {
+    background-color: #f3d55b;
+    border-collapse: collapse;
+}
+
+.menu-table th {
+    background-color: #e6c84f;
+}
+
+.menu-table td, .menu-table th {
+    padding: 8px;
+    text-align: left;
+}
+
+.menu-table input {
+    width: 80px;
+}
+
+.reset-btn {
+    background-color: black;
+    color: yellow;
+    padding: 8px 20px;
+    border: none;
+    float: right;
+}
+.calc-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.calc-box input, .calc-box select {
+    padding: 5px;
+    width: 80px;
+}
+
+.btn {
+    background-color: black;
+    color: yellow;
+    padding: 8px 20px;
+    border: none;
+    margin-right: 10px;
+}

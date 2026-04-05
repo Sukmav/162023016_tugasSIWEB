@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Tugas P4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <img src="assets/itenas.jpeg">
+        <img src="assets/itenas.jpeg">
+        <img src="assets/itenas.jpeg">
+        <img src="assets/itenas.jpeg">
+        <img src="assets/itenas.jpeg">
+        <img src="assets/itenas.jpeg">
+    </div>
+
+    <div class="content">
+        <div class="sidebar">
+            <p onclick="home()">Home</p>
+            <p onclick="showMenu()">Menu</p>
+            <p onclick="showCalculator()">Calculator</p>
+        </div>
+
+
+        <div class="main">
+            <div id="homeSection">
+                klik button disamping >> 
+                <button onclick="shout()">Shout</button>
+            </div>
+
+            <div id="menuSection" class="hidden">
+                <h3>Menu Makanan</h3>
+                <table border="1" width="100%" class="menu-table">
+                    <tr>
+                        <th>No</th>
+                        <th>Makanan/Minuman</th>
+                        <th>Harga</th>
+                        <th>Pesan</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Bakso Istimewa</td>
+                        <td>@ Rp 12000</td>
+                        <td><input type="number" id="bakso" value="0" oninput="hitungTotal()"></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Soto Spesial</td>
+                        <td>@ Rp 10000</td>
+                        <td><input type="number" id="soto" value="0" oninput="hitungTotal()"></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Mie Ayam Super</td>
+                        <td>@ Rp 15000</td>
+                        <td><input type="number" id="mie" value="0" oninput="hitungTotal()"></td>
+                    </tr>
+                </table>
+
+                <br>
+
+                <table width="100%" class="menu-table">
+                    <tr>
+                        <td>Jumlah Total</td>
+                        <td><input type="text" id="total" value="0" readonly></td>
+                    </tr>
+                    <tr>
+                        <td>Diskon</td>
+                        <td><input type="text" id="diskon" value="0" readonly></td>
+                    </tr>
+                    <tr>
+                        <td>Jumlah Bayar</td>
+                        <td><input type="text" id="bayar" value="0" readonly></td>
+                    </tr>
+                </table>
+
+                <br>
+                <button onclick="resetMenu()" class="reset-btn">Reset</button>
+            </div>
+
+            <div id="calcSection" class="hidden">
+                <h3>Calculator</h3>
+
+                <div class="calc-box">
+                    <input type="number" id="num1" value="0">
+
+                    <select id="operator">
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                        <option value="*">*</option>
+                        <option value="/">/</option>
+                        <option value="%">%</option>
+                        <option value="^">^</option>
+                    </select>
+
+                    <input type="number" id="num2" value="0">
+
+                    <span>=</span>
+
+                    <input type="text" id="hasil" value="0" readonly>
+                </div>
+
+                <br>
+
+                <button onclick="hitungCalc()" class="btn">Hitung</button>
+                <button onclick="resetCalc()" class="btn">Reset</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>280224</p>
+        <p>Sistem Informasi | ITENAS 2024</p>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
